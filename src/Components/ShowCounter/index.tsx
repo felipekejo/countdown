@@ -1,4 +1,5 @@
-import { DateTimeDisplay } from "./DateTimeDisplay";
+import { DateTimeDisplay } from "../DateTimeDisplay";
+import { Container, Content, Separator } from "./styles";
 
 type ShowCounterProps = {
   days: string;
@@ -9,21 +10,16 @@ type ShowCounterProps = {
 
 export function ShowCounter({ days, hours, minutes, seconds }:ShowCounterProps){
   return (
-    <div className="show-counter">
-      <a
-        href="https://tapasadhikary.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="countdown-link"
-      >
+    <Container>
+      <Content>
         <DateTimeDisplay value={days} type={'Days'}/>
-        <p>:</p>
+        <Separator>:</Separator>
         <DateTimeDisplay value={hours} type={'Hours'} />
-        <p>:</p>
+        <Separator>:</Separator>
         <DateTimeDisplay value={minutes} type={'Mins'} />
-        <p>:</p>
+        <Separator>:</Separator>
         <DateTimeDisplay value={seconds} type={'Seconds'} />
-      </a>
-    </div>
+      </Content>
+    </Container>
   );
 };

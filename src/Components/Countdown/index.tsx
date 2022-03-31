@@ -1,5 +1,5 @@
-import { useCountdown } from '../Hooks/useCountdown';
-import { ShowCounter } from './ShowCounter';
+import { useCountdown } from "../../Hooks/useCountdown";
+import { ShowCounter } from "../ShowCounter";
 
 type CountdownTimerProps = {
   targetDate:string

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { Content } from "./styles";
 
 type DateTimeDisplayProps = {
   value:string;
@@ -9,10 +8,10 @@ type DateTimeDisplayProps = {
 
 export function DateTimeDisplay({ value, type }:DateTimeDisplayProps){
   return (
-    <div className='countdown'>
+    <Content className='countdown'>
       <p>{value}</p>
       <span>{type}</span>
-    </div>
+    </Content>
   );
 };
 
