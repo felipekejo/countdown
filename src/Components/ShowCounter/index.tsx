@@ -1,23 +1,35 @@
+import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
+import { useCountdown } from "../../Hooks/useCountdown";
 import { DateTimeDisplay } from "../DateTimeDisplay";
-import { Container, Content, Separator } from "./styles";
+import { Container, Content } from "./styles";
 
 type ShowCounterProps = {
-  days: string;
-  hours:string;
-  minutes:string;
-  seconds:string;
+  targetDate: string;
+  icon:"departure"|"arrival";
+  timeZone:string
 }
 
-export function ShowCounter({ days, hours, minutes, seconds }:ShowCounterProps){
+const icons={
+  departure: <FaPlaneDeparture />,
+  arrival: <FaPlaneArrival/>
+}
+
+export function ShowCounter({ icon, targetDate,timeZone }:ShowCounterProps){
+  const [days, hours, minutes, seconds] = useCountdown({targetDate,timeZone});
+
+
+
   return (
     <Container>
       <Content>
+        {icons[icon]}
+        
         <DateTimeDisplay value={days} type={'Days'}/>
-        <Separator>:</Separator>
+        
         <DateTimeDisplay value={hours} type={'Hours'} />
-        <Separator>:</Separator>
+        
         <DateTimeDisplay value={minutes} type={'Mins'} />
-        <Separator>:</Separator>
+        
         <DateTimeDisplay value={seconds} type={'Seconds'} />
       </Content>
     </Container>

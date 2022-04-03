@@ -1,7 +1,17 @@
+import { zonedTimeToUtc } from 'date-fns-tz';
 import { useEffect, useState } from 'react';
 
-const useCountdown = (targetDate:string) => {
-  const countDownDate = new Date(targetDate).getTime();
+type useCountdownProps = {
+  targetDate:string;
+  timeZone:string
+}
+
+const useCountdown = ({targetDate,timeZone}:useCountdownProps) => {
+
+ 
+  const znDate = zonedTimeToUtc(targetDate,timeZone)
+  console.log(znDate)
+  const countDownDate = new Date(znDate).getTime();
 
   const [countDown, setCountDown] = useState(
     countDownDate - new Date().getTime()

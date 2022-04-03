@@ -1,21 +1,28 @@
-import { useCountdown } from "../../Hooks/useCountdown";
 import { ShowCounter } from "../ShowCounter";
+import { Container } from "./styles";
 
-type CountdownTimerProps = {
-  targetDate:string
-}
 
-export function CountdownTimer({ targetDate }:CountdownTimerProps){
-  const [days, hours, minutes, seconds] = useCountdown(targetDate);
+export function CountdownTimer(){
+
+
+
 
 
     return (
+      <Container>
       <ShowCounter
-        days={days}
-        hours={hours}
-        minutes={minutes}
-        seconds={seconds}
+        targetDate="2022-06-26 22:20"
+        icon="departure"
+        timeZone="Australia/Adelaide"
       />
+       <ShowCounter
+        targetDate="2022-06-27 15:50"
+        icon="arrival"
+        timeZone="America/Sao_Paulo"
+
+      />
+
+    </Container>
     );
   
 };

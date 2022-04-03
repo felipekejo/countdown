@@ -12,7 +12,6 @@ export const Content = styled.div`
   align-items: center;
   padding: 0.5rem;
   border: 1px solid #ebebeb;
-  border-radius: 0.25rem;
   text-decoration: none;
   color: #000;  
   background: rgba(255, 255, 255, 0.2);
@@ -21,6 +20,9 @@ export const Content = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  svg{
+    font-size: xx-large;
+  }
  
 `
 export const Separator = styled.p`

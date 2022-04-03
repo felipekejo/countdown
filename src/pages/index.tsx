@@ -10,15 +10,17 @@ const Home: NextPage = () => {
         <Container>
           <Background>
             <Image
-              alt="Mountains"
+              alt="Sao Paulo"
               src={backgroundImg}
               layout="fill"
               objectFit="cover"
               quality={100}
+              objectPosition="center"
             />
           </Background>
           <Content>
-          <CountdownTimer targetDate={'2022-06-26 22:20'} />
+          <CountdownTimer />
+
           </Content>
         </Container>
       
