@@ -14,6 +14,12 @@ export const Background = styled.div`
   height: 100vh;
   width: 100vw;
 
-  z-index: 0;
+  z-index: -1;
+
+  img{
+    width: 100% ;
+    position: relative ;
+    height: unset ;
+  }
 
 `

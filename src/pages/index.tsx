@@ -1,42 +1,35 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import backgroundImgCasamento from '../../public/casamento.jpg'
-import backgroundImgFoz from '../../public/foz.jpg'
-import backgroundImgMercadao from '../../public/mercadao.jpg'
-import backgroundImgOkinawa from '../../public/okinawa.jpg'
+import { useEffect, useState } from 'react'
+import { BackgroundImage } from '../Components/BackgroundImage'
 import { CountdownTimer } from '../Components/Countdown'
 import { Background, Container, Content } from '../styles/Home'
+import { listLogos } from '../ultils/listLogos'
 
 
 
-const listLogos = [
-  {
-    name: "foz",
-    img: backgroundImgFoz
-  },
-  {
-    name: "RJ",
-    img: backgroundImgMercadao
-  },
-  {
-    name: "SP",
-    img: backgroundImgCasamento
-  }
-]
+
+
+
 
 const Home: NextPage = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prev) => {
+        return prev + 1 === listLogos.length ? 0 : prev + 1;
+      });
+    }, 4000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <Container>
       <Background>
         {/* <Carousel listLogos={listLogos}/> */}
-        <Image
-          alt='sp'
-          src={backgroundImgOkinawa}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          objectPosition="center"
+        <BackgroundImage
+          image={listLogos[currentSlide]}
         />
 
       </Background>
