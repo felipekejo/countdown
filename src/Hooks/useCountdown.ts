@@ -10,7 +10,7 @@ const useCountdown = ({targetDate,timeZone}:useCountdownProps) => {
 
  
   const znDate = zonedTimeToUtc(targetDate,timeZone)
-  console.log(znDate)
+ 
   const countDownDate = new Date(znDate).getTime();
 
   const [countDown, setCountDown] = useState(

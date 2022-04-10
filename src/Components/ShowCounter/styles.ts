@@ -6,6 +6,19 @@ max-width:500px
 `
 
 export const Content = styled.div`
+@media (max-width: 500px) {
+    max-width: 425px
+  }
+@media (max-width: 425px) {
+    max-width: 375px
+  }
+
+  @media (max-width: 375px) {
+    max-width: 320px
+  }
+  @media (max-width: 320px) {
+    max-width: 300px
+  }
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -23,7 +36,7 @@ export const Content = styled.div`
   svg{
     font-size: xx-large;
   }
- 
+
 `
 export const Separator = styled.p`
     margin:0 0 21px 0;
