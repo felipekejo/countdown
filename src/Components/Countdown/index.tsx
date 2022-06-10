@@ -14,7 +14,7 @@ export function CountdownTimer() {
 
       <div>
         <ShowCounter
-          targetDate="2022-06-26 22:20"
+          targetDate="2022-06-26 22:00"
           icon="departure"
           timeZone="Australia/Adelaide"
         />
