@@ -1,41 +1,31 @@
-import Casamento from '../../public/casamento.jpg'
-import Disney from '../../public/disney.jpg'
-import Fuji from '../../public/fuji.jpg'
-import Melbourne from '../../public/melbourne.jpg'
-import Mercadao from '../../public/mercadao.jpg'
-import NSW from '../../public/nsw.jpg'
-import Okinawa from '../../public/okinawa.jpg'
-import OperaHouse from '../../public/operahouse.jpg'
-import SA from '../../public/sa.jpg'
+import familia0 from '../../public/familia0.jpg'
+import familia1 from '../../public/familia1.jpeg'
+import familia2 from '../../public/familia2.jpeg'
+import sitio1 from '../../public/sitio1.jpeg'
+import sitio2 from '../../public/sitio2.jpeg'
+import sitio3 from '../../public/sitio3.jpeg'
+
+
 
 
 export const listLogos = [
   {
-    img: OperaHouse
+    img: familia1
   },
   {
-    img: Casamento
+    img: familia2
   },
 
   {
-    img: Mercadao
+    img: sitio1
   },
   {
-    img: Okinawa
+    img: sitio2
   },
   {
-    img: NSW
+    img: sitio3
   },
   {
-    img: Disney
-  },
-  {
-    img: Fuji
-  },
-  {
-    img: Melbourne
-  },
-  {
-    img: SA
-  },
+    img: familia0
+  }
 ]

@@ -2,22 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 padding: 0.5rem;
-max-width:500px
+max-width:450px
+
 `
 
 export const Content = styled.div`
 @media (max-width: 500px) {
-    max-width: 425px
+    max-width: 400px
   }
 @media (max-width: 425px) {
-    max-width: 375px
+    max-width: 350px
   }
 
   @media (max-width: 375px) {
-    max-width: 320px
+    max-width: 300px
   }
   @media (max-width: 320px) {
-    max-width: 300px
+    max-width: 275px
   }
   display: flex;
   flex-direction: row;
