@@ -22,13 +22,13 @@ export function ShowCounter({ icon, targetDate,timeZone }:ShowCounterProps){
   return (
     <Container>
       <Content>         
-        <DateTimeDisplay value={days} type={'Days'}/>
+        <DateTimeDisplay value={days} type={'Dias'}/>
         
-        <DateTimeDisplay value={hours} type={'Hours'} />
+        <DateTimeDisplay value={hours} type={'Horas'} />
         
         <DateTimeDisplay value={minutes} type={'Mins'} />
         
-        <DateTimeDisplay value={seconds} type={'Seconds'} />
+        <DateTimeDisplay value={seconds} type={'Segundos'} />
       </Content>
     </Container>
   );

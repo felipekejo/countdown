@@ -11,7 +11,7 @@ margin-top: 15vh;
 
 h1{
   text-align: center;
-  font-size:48px;
+  font-size:36px;
   color:#ffff00;
   /* margin: 10vh 0 45vh 0; */
 }
