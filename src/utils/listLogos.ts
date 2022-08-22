@@ -10,10 +10,13 @@ import sitio3 from '../../public/sitio3.jpeg'
 
 export const listLogos = [
   {
-    img: familia1
+    img: familia0
   },
   {
     img: familia2
+  },
+  {
+    img: familia1
   },
 
   {
@@ -25,7 +28,5 @@ export const listLogos = [
   {
     img: sitio3
   },
-  {
-    img: familia0
-  }
+ 
 ]
